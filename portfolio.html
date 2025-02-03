@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Analyst Portfolio - Rutvik Kadam</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init("your_user_id"); // Replace with your EmailJS user ID
+    })();
+
+    function sendEmail(event) {
+      event.preventDefault(); // Prevent the form from refreshing the 3
+
+      emailjs.sendForm("your_service_id", "your_template_id", formData)
+        .then((response) => {
+          alert("Message sent successfully!");
+        }, (error) => {
+          alert("Failed to send the message. Please try again.");
+        });
+    }
+  </script>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <div class="logo">Rutvik Kadam</div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Hi, I'm <span>Rutvik Kadam</span></h1>
+        <p>Data Analyst | Visual Storyteller | Problem Solver</p>
+        <a href="#projects" class="btn">View My Work</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <div class="about-img"><img src="photo 2.jpg" class="square-photo" alt="Rutvik Kadam">
+
+        </div>
+        <div class="about-text">
+          <p>I am a passionate data analyst with experience in transforming raw data into actionable insights. My expertise lies in data visualization, statistical analysis, and machine learning. I love solving complex problems and telling stories through data.</p>
+          <a href="Rutvik_Kadam.pdf" class="btn" download>Download Resume</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2>My Skills</h2>
+      <div class="skills-grid">
+        <div class="skill">
+          <i class="fas fa-chart-line"></i>
+          <h3>Data Analysis</h3>
+          <p>Proficient in Python, R, and SQL for data analysis.</p>
+        </div>
+        <div class="skill">
+          <i class="fas fa-chart-bar"></i>
+          <h3>Data Visualization</h3>
+          <p>Expert in Tableau, Power BI, and Matplotlib.</p>
+        </div>
+        <div class="skill">
+          <i class="fas fa-database"></i>
+          <h3>Database Management</h3>
+          <p>Experience with MySQL, PostgreSQL, and MongoDB.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2>My Projects</h2>
+      <div class="projects-grid">
+        <div class="project">
+          <img src="https://via.placeholder.com/400" alt="Project 1">
+          <h3>Sales Dashboard</h3>
+          <p>Interactive dashboard for tracking sales performance.</p>
+        </div>
+        <div class="project">
+          <img src="https://via.placeholder.com/400" alt="Project 2">
+          <h3>Customer Segmentation</h3>
+          <p>Clustering customers based on purchasing behavior.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form onsubmit="sendEmail(event)">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Rutvik Kadam. All rights reserved.</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
