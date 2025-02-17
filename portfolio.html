@@ -13,9 +13,9 @@
     })();
 
     function sendEmail(event) {
-      event.preventDefault(); // Prevent the form from refreshing the 3
+      event.preventDefault(); // Prevent the form from refreshing the page
 
-      emailjs.sendForm("your_service_id", "your_template_id", formData)
+      emailjs.sendForm("your_service_id", "your_template_id", event.target)
         .then((response) => {
           alert("Message sent successfully!");
         }, (error) => {
@@ -46,7 +46,7 @@
     <div class="container">
       <div class="hero-content">
         <h1>Hi, I'm <span>Rutvik Kadam</span></h1>
-        <p>Data Analyst | Visual Storyteller | Problem Solver</p>
+        <p>Data Analyst | AI and ML | Problem Solver</p>
         <a href="#projects" class="btn">View My Work</a>
       </div>
     </div>
@@ -57,8 +57,8 @@
     <div class="container">
       <h2>About Me</h2>
       <div class="about-content">
-        <div class="about-img"><img src="photo 2.jpg" class="square-photo" alt="Rutvik Kadam">
-
+        <div class="about-img">
+          <img src="photo 2.jpg" class="square-photo" alt="Rutvik Kadam">
         </div>
         <div class="about-text">
           <p>I am a passionate data analyst with experience in transforming raw data into actionable insights. My expertise lies in data visualization, statistical analysis, and machine learning. I love solving complex problems and telling stories through data.</p>
@@ -98,12 +98,12 @@
       <h2>My Projects</h2>
       <div class="projects-grid">
         <div class="project">
-          <img src="https://via.placeholder.com/400" alt="Project 1">
+          <img src="project 1.jpg" alt="Sales Dashboard"> <!-- Replace with actual image -->
           <h3>Sales Dashboard</h3>
           <p>Interactive dashboard for tracking sales performance.</p>
         </div>
         <div class="project">
-          <img src="https://via.placeholder.com/400" alt="Project 2">
+          <img src="project 2.jpg" alt="Customer Segmentation"> <!-- Replace with actual image -->
           <h3>Customer Segmentation</h3>
           <p>Clustering customers based on purchasing behavior.</p>
         </div>
@@ -129,9 +129,9 @@
     <div class="container">
       <p>&copy; 2025 Rutvik Kadam. All rights reserved.</p>
       <div class="social-links">
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-github"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/rutvik-kadam-102b68258/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/rutvikkadam2005" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://wa.me/917030229909" target="_blank"><i class="fab fa-whatsapp"></i></a>
       </div>
     </div>
   </footer>
