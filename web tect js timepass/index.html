@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Calculate Amount After Tax</h3>
+
+<label for="units">Number of Units:</label>
+<input type="number" id="units"><br><br>
+
+<label for="price">Price per Unit:</label>
+<input type="number" id="price"><br><br>
+
+<label for="tax">Tax Percentage:</label>
+<input type="number" id="tax"><br><br>
+
+<button onclick="calculateTotal()">Calculate</button>
+
+<p id="total"></p>
+<p id="afterTax"></p>
+
+<script>
+function calculateTotal() {
+    let units = parseFloat(document.getElementById("units").value);
+    let price = parseFloat(document.getElementById("price").value);
+    let tax = parseFloat(document.getElementById("tax").value);
+    
+    if (isNaN(units) || isNaN(price) || isNaN(tax)) {
+        alert("Please enter valid values.");
+        return;
+    }
+    
+    let totalAmount = units * price;
+    let amountAfterTax = totalAmount + (totalAmount * tax / 100);
+    
+    document.getElementById("total").innerHTML = "Total Amount: " + totalAmount.toFixed(2);
+    document.getElementById("afterTax").innerHTML = "Amount After Tax: " + amountAfterTax.toFixed(2);
+}
+</script>
+
+</body>
+</html>
